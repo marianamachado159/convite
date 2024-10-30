@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; /* Preencher toda a largura da tela */
+    height: 100%; /* Preencher toda a altura da tela */
+    transform: translate(-50%, -50%); /* Centraliza o vídeo na tela */
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+    overflow: hidden;
+}
+
+.background-video {
+    width: 100%; /* Para manter o vídeo responsivo */
+    height: 100%; /* Para manter o vídeo responsivo */
+    object-fit: cover; /* Para cobrir toda a área sem distorção */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Coloca o conteúdo acima do vídeo */
+    display: flex;
+    flex-direction: column; /* Para alinhar a pergunta e os botões verticalmente */
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+/* Estilo do texto da pergunta */
+h1 {
+    color: black; /* Garantindo a cor da pergunta como preta */
+    margin-bottom: 20px; /* Espaço entre a pergunta e os botões */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Sombra para destacar */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+    padding: 10px; /* Espaçamento interno para o texto */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.buttons {
+    display: flex; /* Para alinhar os botões lado a lado */
+    gap: 10px; /* Espaço entre os botões */
+}
+
+/* Estilo dos botões */
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white; /* Texto branco nos botões */
+    background-color: #007BFF; /* Cor de fundo azul */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição para efeito hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
